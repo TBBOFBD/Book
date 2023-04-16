@@ -1,0 +1,11 @@
+:root {
+    --background-color: #22272e;
+    --text-color: #ffffffa4;
+    
+    --link-color: #ea00ff;
+    --link-visited-color: #ea00ff;
+
+    --TBBOFBD-text-stroke-color: rgba(0, 255, 0, 0.623);
+    --TBBOFBD-text-stroke-width: 1px;
+    --TBBOFBD-background-image: url(https://i.imgur.com/UjZSzYu.jpg);
+}
