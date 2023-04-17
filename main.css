@@ -1,31 +1,36 @@
 @import "config.css";
 
 /* Common */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Courier New', monospace;
-    align-content: center;
-    text-align: center;
-}
+@media only screen and (min-width: 1px) {
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: 'Courier New', monospace;
+        align-content: center;
+        text-align: center;
+    }
+    
+    a:link {
+        color: var(--link-color);
+    }
+    a:visited {
+        color: var(--link-visited-color);
+    }
 
-a:link {
-    color: var(--link-color);
+    .text-quote {
+        font-style: italic;
+    }
+    
+    #TBBOFBD {
+        background: var(--TBBOFBD-background-image) repeat center center;
+        background-size: 10vw;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke: var(--TBBOFBD-text-stroke-width) var(--TBBOFBD-text-stroke-color);
+    }
 }
-a:visited {
-    color: var(--link-visited-color);
-}
-
-#TBBOFBD {
-    background: var(--TBBOFBD-background-image) repeat center center;
-    background-size: 10vw;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: var(--TBBOFBD-text-stroke-width) var(--TBBOFBD-text-stroke-color);
-}
-
 
 /* Mobile */
 @media only screen and (max-width: 1023px) {
