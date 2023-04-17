@@ -1,4 +1,4 @@
-@import "config.css";
+@import "../config.css";
 
 /* Common */
 @media only screen and (min-width: 1px) {
@@ -15,8 +15,8 @@
     }
 
     body::-webkit-scrollbar-thumb {
-        background-color: var(--text-color);
-        outline: 1px solid var(--text-color);
+        background-color: var(--sctrollbar-color);
+        outline: 1px solid var(--sctrollbar-color);
     }
 
     a:link {
@@ -62,6 +62,7 @@
 @media only screen and (min-width: 1024px) {
     body {
         font-size: 1.1vw;
+        margin: 0 20% 10%;
     }
 
     h1 {
