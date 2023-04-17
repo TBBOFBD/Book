@@ -9,10 +9,20 @@
         align-content: center;
         text-align: center;
     }
-    
+
+    body::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--text-color);
+        outline: 1px solid var(--text-color);
+    }
+
     a:link {
         color: var(--link-color);
     }
+
     a:visited {
         color: var(--link-visited-color);
     }
@@ -20,7 +30,7 @@
     .text-quote {
         font-style: italic;
     }
-    
+
     #TBBOFBD {
         background: var(--TBBOFBD-background-image) repeat center center;
         background-size: 10vw;
@@ -37,9 +47,11 @@
     body {
         font-size: 2.5vw;
     }
+
     h1 {
         font-size: 6vw;
     }
+
     h2 {
         font-size: 4vw;
     }
@@ -51,9 +63,11 @@
     body {
         font-size: 1.1vw;
     }
+
     h1 {
         font-size: 3vw;
     }
+
     h2 {
         font-size: 2vw;
     }

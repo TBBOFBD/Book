@@ -3,7 +3,7 @@ const uuid = () => { return crypto.randomUUID() }
 class TextQuote extends HTMLElement {
     constructor() {
         super();
-        const root = this.attachShadow({mode:'open'});
+        const root = this.attachShadow({ mode: 'open' });
         const styles = [
             "font-style: italic",
             "color: rgb(33, 62, 192)"
@@ -14,7 +14,7 @@ class TextQuote extends HTMLElement {
 
     connectedCallback() {
         let text = this.getAttribute('quote')
-        if(!text) text = "Lorem Ipsum"
+        if (!text) text = "Lorem Ipsum"
         const elem = document.createElement('kbd');
         elem.style.cssText = this.__STYLES.join(';');
         elem.innerHTML = text;
