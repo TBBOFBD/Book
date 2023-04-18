@@ -4,4 +4,4 @@
 
 This is a book about modding video games. It is a collection of tutorials, guides, and other resources for modding games. It is a work in progress, and is currently in the early stages of development.
 
-You can view the book [here](./chapters/README.md)
+You can view the book [here](https://tbbofbd.github.io).

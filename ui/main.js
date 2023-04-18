@@ -48,6 +48,76 @@
         }
     });
 
+    class Note extends HTMLElement {
+        constructor(type) {
+            super();
+            const root = this.attachShadow({ mode: 'open' });
+            const COLORS = {
+                Info: "rgba(42, 201, 98, 0.5)",
+                Warning: "rgba(249, 62, 62, 0.5)",
+                Hint: "#rgba(44, 194, 232, 0.5)"
+            };
+            this.__TYPE = type;
+            this.__ROOT = root;
+            this.__COLOR = COLORS[type] || "#000";
+        }
+        onConnect(data, alignment) {
+            const elem = document.createElement('div');
+            elem.setAttribute('align', 'left');
+            elem.style.cssText = `background-color: ${this.__COLOR};border-radius: 10px;padding: 10px;`;
+            const title = document.createElement('h2');
+            title.style.position = "relative";
+            title.style.top = "-20px";
+            title.style.left = "5px";
+            title.innerText = this.__TYPE;
+            elem.appendChild(title);
+            const contentContainer = document.createElement('div');
+            contentContainer.setAttribute('align', alignment);
+            const content = document.createElement('span');
+            content.innerHTML = data;
+            contentContainer.appendChild(content);
+            elem.appendChild(contentContainer);
+            this.__ROOT.appendChild(elem);
+        }
+    }
+
+    class NoteInfo extends Note {
+        constructor() {
+            super("Info");
+        }
+        connectedCallback() {
+            const data = this.getAttribute('data') || "Lorem Ipsum";
+            const alignment = this.getAttribute('alignment') || "center";
+            super.onConnect(data, alignment);
+        }
+    }
+
+    class NoteWarning extends Note {
+        constructor() {
+            super("Warning");
+        }
+        connectedCallback() {
+            const data = this.getAttribute('data') || "Lorem Ipsum";
+            const alignment = this.getAttribute('alignment') || "center";
+            super.onConnect(data, alignment);
+        }
+    }
+
+    class NoteHint extends Note {
+        constructor() {
+            super("Hint");
+        }
+        connectedCallback() {
+            const data = this.getAttribute('data') || "Lorem Ipsum";
+            const alignment = this.getAttribute('alignment') || "center";
+            super.onConnect(data, alignment);
+        }
+    }
+
+    customElements.define('note-info', NoteInfo);
+    customElements.define('note-warning', NoteWarning);
+    customElements.define('note-hint', NoteHint);
+
     const ALLOWED_LANGS = [
         "clike", "c", "cpp", "css",
         "dart", "docker",
