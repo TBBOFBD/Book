@@ -52,13 +52,15 @@
         "clike", "c", "cpp", "css",
         "dart", "docker",
         "go", "go-mod", "gradle", "groovy",
-        "handlebars", "haskell", "http",
+        "handlebars", "haskell", "http", "html",
         "javascript", "java", "javadoclike", "javadoc", "javastacktrace", "jsdoc", "json", "json5", "jsonp", "jsstacktrace", "jsx",
         "linker-script",
-        "markup", "markup-templating", "makefile", "markdown",
+        "markup", "markup-templating", "makefile", "markdown", "mathml",
         "python",
         "ruby", "rust",
+        "svg",
         "toml", "typescript", "ts", "tsx",
+        "xml",
         "yaml", "yml",
     ];
 
@@ -68,13 +70,15 @@
      * @param {"clike"|"c"|"cpp"|"css"|
      * "dart"|"docker"|
      * "go"|"go-mod"|"gradle"|"groovy"|
-     * "handlebars"|"haskell"|"http"|
+     * "handlebars"|"haskell"|"http"|"html"|
      * "javascript"|"java"|"javadoclike"|"javadoc"|"javastacktrace"|"jsdoc"|"json"|"json5"|"jsonp"|"jsstacktrace"|"jsx"|
      * "linker-script"|
-     * "markup"|"markup-templating"|"makefile"|"markdown"|
+     * "markup"|"markup-templating"|"makefile"|"markdown"|"mathml"
      * "python"|
      * "ruby"|"rust"|
+     * "svg"|
      * "toml"|"typescript"|"ts"|"tsx"|
+     * "xml"|
      * "yaml"|"yml"} lang code language
      * 
      * EXAMPLE:
