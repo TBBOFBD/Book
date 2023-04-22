@@ -1,4 +1,4 @@
-@import "../config.css";
+@import "./config.css";
 
 code[class *=language-],
 pre[class *=language-] {
@@ -22,7 +22,7 @@ pre[class *=language-] {
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
-    hyphens: none
+    hyphens: none;
 }
 
 pre[class *=language-] {

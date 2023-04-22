@@ -1,45 +1,43 @@
-@import "../config.css";
+@import "config.css";
 
 /* Common */
-@media only screen and (min-width: 1px) {
-    body {
-        background-color: var(--background-color);
-        color: var(--text-color);
-        font-family: 'Courier New', monospace;
-        align-content: center;
-        text-align: center;
-    }
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+    align-content: center;
+    text-align: center;
+}
 
-    body::-webkit-scrollbar {
-        width: 1em;
-    }
+body::-webkit-scrollbar {
+    width: 1em;
+}
 
-    body::-webkit-scrollbar-thumb {
-        background-color: var(--sctrollbar-color);
-        outline: 1px solid var(--sctrollbar-color);
-    }
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    outline: 1px solid var(--scrollbar-color);
+}
 
-    a:link {
-        color: var(--link-color);
-    }
+a:link {
+    color: var(--link-color);
+}
 
-    a:visited {
-        color: var(--link-visited-color);
-    }
+a:visited {
+    color: var(--link-visited-color);
+}
 
-    .text-quote {
-        font-style: italic;
-    }
+.text-quote {
+    font-style: italic;
+}
 
-    #TBBOFBD {
-        background: var(--TBBOFBD-background-image) repeat center center;
-        background-size: 10vw;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-stroke: var(--TBBOFBD-text-stroke-width) var(--TBBOFBD-text-stroke-color);
-    }
+#TBBOFBD {
+    background: var(--TBBOFBD-background-image) repeat center center;
+    background-size: 10vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: var(--TBBOFBD-text-stroke-width) var(--TBBOFBD-text-stroke-color);
 }
 
 /* Mobile */

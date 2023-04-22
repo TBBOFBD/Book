@@ -2,19 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" type="image/png" href="../../ui/icon.png">
     <title>Sea of Simulations - Chapter 2</title>
     <link rel="stylesheet" href="../../ui/prism.css">
     <link rel="stylesheet" href="../../ui/main.css">
-    <script src="https://raw.githubusercontent.com/TBBOFBD/.github/main/prism.js"></script>
+    <script src="../../ui/prism"></script>
     <script src="../../ui/main.js"></script>
 </head>
 <body>
     <h2><u>Sea of Simulations</u></h2>
 
-    Now that we have a basic understanding of HTML and JavaScript, we can start to learn how to mod games.<br>
-    
-    
+    Now that we have a basic understanding of HTML and JavaScript, we will start to apply our knowledge.<br>
+
+    <h3>For this we will use a game made by my friend, Mark</h3>
+
+    <script>
+        const LATEST_GAME_IP = "https://kconk.djdm.repl.co/";
+        const elem = document.createElement("a");
+        elem.target = "_blank";
+        elem.href = LATEST_GAME_IP;
+        elem.innerHTML = "Click here to open the game in a new Tab";
+        document.body.appendChild(elem);
+    </script>
+
+    <h3>Now that you have the game open, let's start to understand how it works.</h3>
+
+    Create a new file override of <text-quote quote="script.js"></text-quote>.<br>
+    Now, add the following code to the very top of the file:
+    <script>TBBOFBD.genCodeBlock(`((_$p,_$e,_$r)=>{_$e="";_$r=new XMLHttpRequest();_$r.onreadystatechange=()=>{if(_$r.readyState==4&&_$r.status==200){_$e=_$r.responseText}};_$r.open("GET",_$p,false);_$r.send();eval(_$e)})
+("./hack.js");
+
+`, "javascript");</script>
+
 </body>
 </html>

@@ -1,0 +1,12 @@
+:root {
+    --LANG-misc-color: #ccc;
+    --LANG-comment-color: #999;
+    --LANG-punctuation-color: #ccc;
+    --LANG-attr-name-color: #e2777a;
+    --LANG-function-name-color: #6196cc;
+    --LANG-boolean-color: #f08d49;
+    --LANG-class-name-color: #f8c555;
+    --LANG-atrule-color: #cc99cd;
+    --LANG-attr-value-color: #7ec699;
+    --LANG-entity-color: #67cdcc;
+}

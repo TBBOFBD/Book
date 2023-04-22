@@ -2,11 +2,12 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.TBBOFBD = {}));
-})(this, (function (exports) {'use strict';
+})(this, (function (exports) {
+    'use strict';
 
     const uuid = () => {
-        return crypto.randomUUID()
-    };exports.uuid = uuid;
+        return "STYLE-" + crypto.randomUUID();
+    }; exports.uuid = uuid;
 
     customElements.define('text-quote', class extends HTMLElement {
         constructor() {
@@ -31,6 +32,36 @@
     customElements.define('code-block', class extends HTMLElement {
         constructor() {
             super();
+            const ID = uuid();
+            this.__ID = ID;
+            const style = document.createElement('style');
+            //? Hide Scrollbar
+            // style.innerHTML = `
+            // .${ID}::-webkit-scrollbar {
+            //     display: none;
+            // }
+            // .${ID} {
+            //     -ms-overflow-style: none;
+            //     scrollbar-width: none;
+            // }`;
+            style.innerHTML = `
+            .${ID}::-webkit-scrollbar {
+                width: 1em;
+            }
+
+            .${ID}::-webkit-scrollbar-track {
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+            
+            .${ID}::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background-color: var(--scrollbar-color);
+                outline: 1px solid var(--scrollbar-color);
+            }
+            `;
+            document.head.appendChild(style);
         }
         connectedCallback() {
             let text = this.getAttribute('code')
@@ -41,9 +72,8 @@
             const code = document.createElement('code');
             code.className = `language-${lang}`;
             code.innerHTML = text;
-            code.style.overflow = "hidden";
+            elem.setAttribute('class', this.__ID);
             elem.appendChild(code);
-            elem.style.overflow = "hidden";
             document.body.appendChild(elem);
         }
     });
